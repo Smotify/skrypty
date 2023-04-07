@@ -1,5 +1,5 @@
 local currentVersion = "1.0" -- tutaj wprowadź aktualną wersję twojego skryptu
-local githubUrl = "https://raw.githubusercontent.com/Smotify/skrypty/main/skrypt.lua" -- tutaj wprowadź adres URL Twojego pliku skryptu na GitHubie
+local githubUrl = "https://github.com/Smotify/skrypty.git" -- tutaj wprowadź adres URL Twojego pliku skryptu na GitHubie
 
 local function download(url, path)
     local content = http.get(url).readAll()
