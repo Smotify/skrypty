@@ -1,28 +1,26 @@
-local currentVersion = "1.0" -- tutaj wprowadź aktualną wersję twojego skryptu
-local githubUrl = "https://github.com/Smotify/skrypty.git" -- tutaj wprowadź adres URL Twojego pliku skryptu na GitHubie
-
-local function download(url, path)
-    local content = http.get(url).readAll()
-    local file = fs.open(path, "w")
-    file.write(content)
-    file.close()
-end
-
-local function getVersion(url)
-    local content = http.get(url).readAll()
-    local version = content:match('local currentVersion = "(.-)"')
-    return version
-end
-
-local function install(url)
-    download(url, "skrypt.lua")
-    print("Pobrano nowszą wersję skryptu!")
-end
-
-local githubVersion = getVersion(githubUrl)
-
-if currentVersion < githubVersion then
-    install(githubUrl)
-else
-    print("Masz już najnowszą wersję skryptu!")
+function installSkrypty()
+    local url = "https://codeload.github.com/Smotify/skrypty/zip/master"
+    local zipFile = getMudletHomeDir() .. "/skrypty.zip"
+    local unzipDir = getMudletHomeDir() .. "/skrypty-master/"
+    registerAnonymousEventHandler("sysDownloadDone", function(_, filename)
+        if filename == zipFile then
+            registerAnonymousEventHandler("sysUnzipDone", function()
+                os.remove(zipFile)
+                os.rename(unzipDir .. "/skrypty", getMudletHomeDir() .. "/skrypty/")
+                installPackage(getMudletHomeDir() .. "/skrypty/Smotify.xml")
+                if not saveProfile() then
+                    tempTimer(5, function() saveProfile() end)
+                end
+                cecho("\n&lt;CadetBlue&gt;(skrypty)&lt;tomato&gt;: Skrypty zainstalowane\n")
+            end)
+            registerAnonymousEventHandler("sysUnzipError", function()
+                cecho("\n&lt;CadetBlue&gt;(skrypty)&lt;tomato&gt;: Blad podczas rozpakowywania skryptow\n")
+            end)
+            unzipAsync(zipFile, getMudletHomeDir())
+        end
+    end)
+    registerAnonymousEventHandler("sysDownloadError", function(_, errorFound)
+        cecho("\n&lt;CadetBlue&gt;(skrypty)&lt;tomato&gt;: Blad podczas pobierania skryptow: " .. errorFound .. "\n")
+    end)
+    downloadFile(zipFile, url)
 end
