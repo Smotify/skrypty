@@ -746,7 +746,10 @@
             "regexps": [
                 "ornamentowane kruczoczarne helmy wielke",
                 "ornamentowany kruczoczarny helm wielki",
-                "ornamentowanym kruczoczarnym helmie wielkim"
+                "ornamentowanym kruczoczarnym helmie wielkim",
+		"ornamentowanego kruczoczarnego helmu wielkieg",
+		"ornamentowanemu kruczoczarnemu helmowi wielkiemu",
+		"ornamentowanym kruczoczarnym helmem wielkim"
             ]
         },
         "osobliwy szklany pierscien": {
@@ -943,7 +946,10 @@
             ],
             "regexps": [
                 "pozlacane okulary z niebieskawych szkielek",
-                "pozlacanych okularach z niebieskawych szkielek"
+                "pozlacanych okularach z niebieskawych szkielek",
+		"pozlacanych okularow z niebieskawych szkielek",
+		"pozlacanymi okularami z niebieskawych szkielek",
+		"pozlacanym okularom z niebieskawych szkielek"
             ]
         },
         "rezonujacy krysztalowy mlot": {
@@ -1339,7 +1345,8 @@
                 "zdobionego zlotego pierscienia",
                 "zdobiony zloty pierscien",
                 "zdobionym zlotym pierscieniem",
-                "zdobionym zlotym pierscieniu"
+                "zdobionym zlotym pierscieniu",
+		"zdobionemu zlotemu pierscieniowi"
             ]
         },
         "zielony luskowaty plaszcz": {
