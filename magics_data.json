@@ -1111,6 +1111,16 @@
                 "starym matowym pancerzu"
             ]
         },
+        "luskowy czerwonawy kaftan": {
+            "type": [
+                "srednia zbroja"
+            ],
+            "regexps": [
+                "luskowe czerwonawe kaftany",
+                "luskowy czerwonawy kaftan",
+                "luskowym czerwonawym kaftanie"
+            ]
+        },
         "strzelisty zlocisty helm": {
             "type": [
                 "helm"
