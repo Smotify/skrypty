@@ -1505,6 +1505,19 @@
 			"plytkowym roziskrzonym pancerzu"
             ]
         },
+	"czerwonozloty rozjarzony kaftan": {
+            "type": [
+                "srednia zbroja"
+            ],
+            "regexps": [
+			"czerwonozloty rozjarzony kaftan",
+			"czerwonozlotego rozjarzonego kaftana",
+			"czerwonozlotemu rozjarzonemu kaftanowi",
+			"czerwonozloty rozjarzony kaftan",
+			"czerwonozlotym rozjarzonym kaftanem",
+			"czerwonozlotym rozjarzonym kaftanie"
+            ]
+        },
 	"podluzna zdobiona skrzynka": {
             "type": [
                 "pojemnik"
