@@ -1329,6 +1329,21 @@
                 "upiornym ciemnym chepeszu"
             ]
         },
+
+       "dlugi mglisty poltorak": {
+            "type": [
+                "jednoreczny miecz",
+                "dwureczny miecz"
+            ],
+            "regexps": [
+                "dlugie mgliste poltoraki,
+                "dlugiego mglistego poltoraka",
+                "dlugiemu mglistemu poltorakowi,",
+                "dlugi mglisty poltorak",
+                "dlugim mglistym poltorakiem",
+                "dlugim mglistym poltoraku"
+            ]
+        },
         "upiorny ciemny mlot": {
             "type": [
                 "jednoreczny mlot",
