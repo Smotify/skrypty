@@ -1336,7 +1336,7 @@
                 "dwureczny miecz"
             ],
             "regexps": [
-                "dlugie mgliste poltoraki,
+                "dlugie mgliste poltoraki",
                 "dlugiego mglistego poltoraka",
                 "dlugiemu mglistemu poltorakowi,",
                 "dlugi mglisty poltorak",
